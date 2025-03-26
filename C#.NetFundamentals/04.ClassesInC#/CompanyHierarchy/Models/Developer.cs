@@ -2,8 +2,6 @@
 {
     internal class Developer : Employee
     {
-        private const double BaseSalary = 4000;
-
         public Developer(string name, int age, string ProgrammingLanguage, int ExperienceLevel, int workingHours = 8) 
             : base(name, age, workingHours)
         {

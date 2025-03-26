@@ -3,7 +3,7 @@
     internal class Manager : Employee
     {
         private const int TemporaryWorkingHours = 10;
-        private const double BaseSalary = 7000;
+        private const double ManagerSalaryAddition = 4000;
         public Manager(string name, int age) 
             : base(name, age, TemporaryWorkingHours)
         {
@@ -12,7 +12,7 @@
 
         public List<Employee> Subordinates { get; set; }
 
-        public override double Salary => base.Salary + this.Subordinates.Count * 200;
+        public override double Salary => base.Salary + ManagerSalaryAddition + this.Subordinates.Count * 200;
         public void AddSubordinates(Employee employee)
         {
             this.Subordinates.Add(employee);
